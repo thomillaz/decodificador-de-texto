@@ -1,0 +1,138 @@
+/* ----- ABOUT ---------------------------------
+----- Decodificador de texto [HTML, CSS & JS] --
+----- 1º desafio, Programa ONE(Oracle + Alura) -
+----- Desenvolvido por Milla Thomaz/@thomillaz -
+--------------------------------------------- */
+/* ----- SETTINGS --------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+}
+:root{
+    --fontBody: 'Inconsolata', monospace;
+    --fontColor: #2c2776;
+    --titleColor: #d088f3;
+    --bgColor: #eaeefb;
+    --bgShow: #fff;
+}
+body{
+    color: var(--fontColor);
+    font-family: var(--fontBody);
+    background: var(--bgColor);
+}
+@keyframes floating{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    10%{
+        transform: translateY(-10px);
+    }
+}
+/* ----- HEADER ----------------------------- */
+header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 5px 20px;
+}
+header #logo{
+    height: 100%;
+    margin-right: 20px;
+}
+header h1{
+    color: var(--titleColor);
+    font-weight: 200;
+}
+header h1::before{
+    content: '[';
+    color: var(--fontColor);
+}
+header h1::after{
+    content: ']';
+    color: var(--fontColor);
+}
+/* ----- MAIN ------------------------------- */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: 1px 0;
+}
+.container{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.block-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 700px;
+    height: 500px;
+    border: 1px solid var(--fontColor);
+}
+.block-input__text{
+    padding: 20px;
+    background: lightgreen;
+}
+.block-input__footer{
+    background: green;
+    padding: 20px;
+}
+.block-input__footer .aviso{
+    font-weight: 200;
+    font-size: 12px;
+    background: lightblue;
+    padding: 5px 0;
+}
+.block-input__footer .buttons{
+    background: lightcoral;
+    padding: 5px 0;
+}
+.block-input__footer button{
+    font-family: var(--fontBody);
+    padding: 5px;
+    border-radius: 10px;
+    width: 180px;
+    height: 35px;
+    cursor: pointer;
+}
+.block-show{
+    background: var(--bgShow);
+    width: 300px;
+    height: 500px;
+    box-shadow: 1px 1px 10px #2c277633;
+}
+.block-show__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+.block-show #show__img{
+    width: 100%;
+    transform: translateY(-10px);
+    animation: floating 5s infinite;
+}
+.block-show__text .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+/* ----- FOOTER ----------------------------- */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    bottom: 0;
+}
