@@ -15,11 +15,11 @@
 }
 :root{
     --fontBody: 'Inconsolata', monospace;
-    --fontColor: #9d66d6;
+    --fontColor: #8e84a9;
     --titleColor: #d088f3;
-    --bgColor: #f3f1f4;
+    --bgColor: #f9f7fa;
     --bgShow: #fff;
-    --linkColor: #a4ace3;
+    --linkColor: #b9aacb;
     --hover: #da8bc1;
 }
 body{
