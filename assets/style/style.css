@@ -16,11 +16,15 @@
 :root{
     --fontBody: 'Inconsolata', monospace;
     --fontColor: #8e84a9;
-    --titleColor: #d088f3;
-    --bgColor: #f9f7fa;
+    --titleColor: #dacee6;
+    --bgColor: #f9f7fb;
     --bgShow: #fff;
-    --linkColor: #b9aacb;
-    --hover: #da8bc1;
+    --linkColor: #7e4780;
+    --hover: #a286c0;
+}
+::selection{
+    color: var(--bgShow);
+    background: var(--linkColor);
 }
 body{
     color: var(--fontColor);
@@ -58,7 +62,7 @@ header #logo{
 }
 header h1{
     color: var(--titleColor);
-    font-weight: 200;
+    font-weight: 400;
 }
 header h1::before{
     content: '[';
