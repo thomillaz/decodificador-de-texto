@@ -21,24 +21,22 @@
     <main>
         <div class="container block-input">
             <div class="block-input__text">
-                <textarea placeholder="Digite seu texto">
-
-                </textarea>
+                <textarea class='input_text' placeholder="Digite seu texto"></textarea>
             </div>
             <div class="block-input__footer">
                 <p class="aviso">
                     <i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem acento.
                 </p>
                 <div class="buttons">
-                    <button class="encrypt">Criptografar</button>
-                    <button class="decrypt">Descriptografar</button>
+                    <button class="encrypt" onclick="btnEncrypt()">Criptografar</button>
+                    <button class="decrypt" onclick="btnDecrypt()">Descriptografar</button>
                 </div>
             </div>
         </div>
         <div class="container block-show">
             <div class="block-show__text">
                 <img id="show__img" src="./assets/img/crystals.png">
-                <p class="title">Nenhuma mensagem encontrada.</p>
+                <textarea class="show_txt">Nenhuma mensagem encontrada.</textarea>
                 <p class="info">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
         </div>
@@ -49,4 +47,5 @@
     </footer>
     <script src="https://kit.fontawesome.com/78ddebd413.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

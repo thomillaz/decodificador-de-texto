@@ -163,10 +163,14 @@ main{
     transform: translateY(-10px);
     animation: floating 5s infinite;
 }
-.block-show__text .title{
-    font-size: 30px;
+.block-show__text .show_txt{
+    color: var(--fontColor);
+    font-size: 25px;
     font-weight: 700;
     margin: 15px 0;
+    resize: none;
+    width: 100%;
+    text-align: center;
 }
 /* ----- FOOTER ----------------------------- */
 footer{
