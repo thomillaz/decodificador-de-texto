@@ -5,24 +5,61 @@
 `A letra "a" é convertida para "ai"`
 `A letra "o" é convertida para "ober"`
 `A letra "u" é convertida para "ufat"` */
-const inputText = document.querySelector('.input_text');
-const showText = document.querySelector('.show_txt');
+const btnEncrypt = document.getElementById('encrypt')
+const btnDecrypt = document.getElementById('decrypt')
+const btnCopy = document.getElementById('copy')
+const inputText = document.getElementById('input_text')
+let inTxt = inputText.value
+const showText = document.getElementById('block-show__text')
 
-function btnEncrypt(){
-    const txtEncrypt = encrypt(inputText.value);
-    showText.value = txtEncrypt;
-    inputText.value = '';
+btnEncrypt.addEventListener('click', criptografar)
+btnDecrypt.addEventListener('click', descriptografar)
+btnCopy.addEventListener('click', copiar)
+
+function criptografar(){
+    if(inTxt.includes('e')){
+      inTxt = inTxt.replace(/e/g, 'enter')
+    }
+    if(inTxt.includes('i')){
+        inTxt = inTxt.replace(/i/g, 'imes')
+    }
+    if(inTxt.includes('a')){
+        inTxt = inTxt.replace(/a/g, 'ai')
+    }
+    if(inTxt.includes('o')){
+        inTxt = inTxt.replace(/o/g, 'ober')
+    }
+    if(inTxt.includes('u')){
+        inTxt = inTxt.replace(/u/g, 'ufat')
+    }
+    console.log(inTxt)
+
+    showText.innerHTML = `<p id='resultado'>${inTxt}</p>`
+    showText.innerHTML += `<button id="copy">Copiar</button>`
 }
 
-function encrypt(stringEncrypt){
-    let matrizCodigo = [['e', 'enter'], ['i', 'imes'], ['a', 'ai'], ['o', 'ober'], ['u', 'ufat']];
-    stringEncrypt = stringEncrypt.toLowerCase();
-
-    for(let i = 0; i < matrizCodigo.length; i++){
-        if(stringEncrypt.includes(matrizCodigo[i][0])){
-            stringEncrypt = stringEncrypt.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
-        }
+function descriptografar(){
+    if(inTxt.includes('enter')){
+        inTxt = inTxt.replace(/enter/g, 'e')
+    }
+    if(inTxt.includes('imes')){
+        inTxt = inTxt.replace(/imes/g, 'i')
+    }
+    if(inTxt.includes('ai')){
+        inTxt = inTxt.replace(/ai/g, 'a')
+    }
+    if(inTxt.includes('ober')){
+        inTxt = inTxt.replace(/ober/g, 'o')
+    }
+    if(inTxt.includes('ufat')){
+        inTxt = inTxt.replace(/ufat/g, 'u')
     }
 
-    return stringEncrypt;
+    showText.innerHTML = `<p id='resultado'>${inTxt}</p>`
+    showText.innerHTML += `<button id="copy">Copiar</button>`
+}
+
+function copiar(){
+    let res = document.getElementById('resultado')
+    res.innerText.select()
 }

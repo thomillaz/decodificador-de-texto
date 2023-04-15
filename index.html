@@ -21,22 +21,22 @@
     <main>
         <div class="container block-input">
             <div class="block-input__text">
-                <textarea class='input_text' placeholder="Digite seu texto"></textarea>
+                <textarea id='input_text' placeholder="Digite seu texto"></textarea>
             </div>
             <div class="block-input__footer">
                 <p class="aviso">
                     <i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem acento.
                 </p>
                 <div class="buttons">
-                    <button class="encrypt" onclick="btnEncrypt()">Criptografar</button>
-                    <button class="decrypt" onclick="btnDecrypt()">Descriptografar</button>
+                    <button id="encrypt">Criptografar</button>
+                    <button id="decrypt">Descriptografar</button>
                 </div>
             </div>
         </div>
         <div class="container block-show">
-            <div class="block-show__text">
+            <div id="block-show__text">
                 <img id="show__img" src="./assets/img/crystals.png">
-                <textarea class="show_txt">Nenhuma mensagem encontrada.</textarea>
+                <p class="show_txt">Nenhuma mensagem encontrada.</p>
                 <p class="info">Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
         </div>
@@ -45,6 +45,7 @@
         <p class="dev">Developed by [<a href='https://www.github.com/thomillaz/' title='thomillaz on github'
                 target='_blank'>thomillaz</a>]</p>
     </footer>
+    <script src="./assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/78ddebd413.js" crossorigin="anonymous"></script>
 </body>
 
