@@ -7,7 +7,7 @@
 `A letra "u" é convertida para "ufat"` */
 const btnEncrypt = document.getElementById('encrypt')
 const btnDecrypt = document.getElementById('decrypt')
-const btnCopy = document.getElementById('copy')
+const btnCopy = document.getElementById('btnCopy')
 const inputText = document.getElementById('input_text')
 let inTxt = inputText.value
 const showText = document.getElementById('block-show__text')
@@ -35,7 +35,8 @@ function criptografar(){
     console.log(inTxt)
 
     showText.innerHTML = `<p id='resultado'>${inTxt}</p>`
-    showText.innerHTML += `<button id="copy">Copiar</button>`
+    //showText.innerHTML += `<button id="btnCopy">Copiar</button>`
+    document.btnCopy.style.display = 'block'
 }
 
 function descriptografar(){
@@ -56,10 +57,15 @@ function descriptografar(){
     }
 
     showText.innerHTML = `<p id='resultado'>${inTxt}</p>`
-    showText.innerHTML += `<button id="copy">Copiar</button>`
+    //showText.innerHTML += `<button id="btnCopy">Copiar</button>`
+    document.btnCopy.style.display = 'block'
 }
 
 function copiar(){
     let res = document.getElementById('resultado')
     res.innerText.select()
+    document.execCommand('copy')
+    document.getElementById('btnCopy')
+    console.log(res.value)
+    window.alert('Copiado!')
 }
