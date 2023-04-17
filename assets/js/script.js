@@ -34,8 +34,8 @@ function criptografar(){
     }
     console.log(inTxt)
 
-    showText.innerHTML = `<p id='resultado'>${inTxt}</p>`
-    //showText.innerHTML += `<button id="btnCopy">Copiar</button>`
+    showText.innerText = `${inTxt}`
+    showText.innerHTML += `<button id="btnCopy">Copiar</button>`
     document.btnCopy.style.display = 'block'
 }
 
@@ -56,8 +56,8 @@ function descriptografar(){
         inTxt = inTxt.replace(/ufat/g, 'u')
     }
 
-    showText.innerHTML = `<p id='resultado'>${inTxt}</p>`
-    //showText.innerHTML += `<button id="btnCopy">Copiar</button>`
+    showText.innerText = `${inTxt}`
+    showText.innerHTML += `<button id="btnCopy">Copiar</button>`
     document.btnCopy.style.display = 'block'
 }
 

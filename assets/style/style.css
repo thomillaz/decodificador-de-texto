@@ -175,7 +175,6 @@ button{
 #block-show__text #btnCopy{
     color: var(--bgColor);
     background-color: var(--hover);
-    display: none;
 }
 #block-show__text #btnCopy:hover{
     background-color: var(--fontColor);
